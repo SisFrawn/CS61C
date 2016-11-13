@@ -1,0 +1,64 @@
+Final Exam Review Notes
+
+1. Mal Mips -> Tal Mips
+    mul $t0 $a0 $a1         ->      mul $a0 $a1
+                                    mflo    $t0
+
+    j Far                   ->      lui $at, first 16 bits of address
+                                    ori $at, $at, last 16 bits of address
+                                    jr $at
+    (when you are jumping to an address that requires all 32 bits in the address)
+
+
+
+2. Jump in binary
+    6 bits for opcode AND 26 bits for absolute address means 6 bits need to be cut off of absolute address
+    FIRST 4 bits cut off and last 2 bits cut off of address in full binary instruction (because word aligned)
+    Ideal absolute addressing in jumps: can only jump to addresses that are 2^6 aligned (because could then cut off last 6 bits)
+
+
+3. XOR'ing two numbers is a way to tell if bits are different between two numbers (XORing a number by itself is 0)
+
+4. You can ANDI by 1 to tell if the right most bit is on or not
+
+5. Memory
+        Stack  (grows downwards, variables within functions)
+
+        Heap   (mallocing and only mallocing)
+        Static (string literals AND variable declarations outside of a function... sometimes both in one line)
+        Code   (#define, the actual code, etc.)
+
+        Pointers are always 4 bytes because they hold a 32 bit memory address
+
+        You ARE allowed to create a pointer and return it from within a function (yes, the pointer will vanish after the return but all that is returned is an integer address which gets stored in the pointer that is being assigned into)
+            Example: Returns a valid pointer that points to static memory
+            char* get_string() {
+                char* a = "asdf";
+                return a;
+            }
+
+6. CPU + Hazards
+
+        Critical path w/ registers: clk-to-q + prop delay + setup time before next clock cycle hits
+
+        Hold time max depends on how long it takes between when the first result arrives, the clock firing immediately, and then how long it takes for that second result to arrive and overwrite the first
+
+        For a value to go into the PC, it must be word aligned (divisible by 4)
+
+        Registers are read from at the Decode stage in the IF, DE, EX, MEM, WB cycle, and thus to avoid data hazards, must have the instruction reading from a register's DE stage in line with the WB stage of the instruction writing to the register
+            -> Forwarding sends the result from EX stage down to other instructions' EX stage b4 formal WB
+
+7. Caches
+
+        Processor Address = 32 bits (or however many bits it takes to address the entirety of the cache)
+            Set Index = log2(number of sets)
+            Block Offset = should be able to cover entirety of a single block
+            Tag = Address size - Set size - block size
+            (TIO)
+
+            Row in cache composed of tag bits + valid bit + # of block bits 
+
+        Comparators (expensive) direct the query to a set to check if address exists in cache
+            More sets (w/ fewer blocks per set) require fewer comparators
+            Direct-mapped = 1 block per set, 1 comparator, cheapest, fastest lookup
+            Fully associative = 1 comparator per block, 1 total set, lowest

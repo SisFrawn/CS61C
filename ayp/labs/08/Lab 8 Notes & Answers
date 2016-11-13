@@ -1,0 +1,36 @@
+Lab 8 Notes & Answers
+
+Scenario 1
+
+    Can't change set size (blocks) because in a direct mapping cache, each mem_addr maps to only one cache block
+
+    1. Hit rate: 0%
+    2. Changing rep count will not change anything
+    3. Can change step size (currently, the array elements we're looking at simply map over themselves) to 1. Since we're looking at consecutive elements, and we have two words per cache block, spatial locality will load in "next" element sometimes
+
+Scenario 2
+
+    1.Hit rate: 75%
+        Each time you miss, you load in the next 4
+        Try 0, Miss, Load 0, 1, 2, 3
+        Write 0, Hit
+        Try 2, Hit
+        Write 2, Hit
+
+        ...Try 4, Miss, Load 4, 5, 6, 7 LOOP
+
+    2. As rep count goes to infinity, hit rate stays the same because of this ^
+
+    3. Do the operations consecutively (ie. don't wait till the stuff is flushed from the cache while you do the current operation on the rest of the array... instead do all the repcount ops on a single number before moving on, because it would still be loaded into the cache)
+
+Scenario 3
+
+    1. The step size is not equal to our cache block size. Thus the element we're accessing may or may not be loaded in ON OUR SECOND PASS (on the first pass, everything will miss) and there will be variance because we may have loaded in that block of 4 to our cache or not.
+
+    2. We can make this deterministic by making our cache block size 8.
+    Try random 0-7, Miss
+    Load 0-7        HITS ON SECOND PASS ALWAYS
+    Try random 8-15, Miss
+    Load 8-15       HITS ON SECOND PASS
+
+    First pass is all misses, second pass is all hits

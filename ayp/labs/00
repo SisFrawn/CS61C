@@ -1,0 +1,34 @@
+Lab0 Exercises 
+
+4.1:
+
+	6, 9, 15, 9, 9 
+	0x6, 0x9, 0xF, 0x9, 0x9
+
+4.2
+
+	1, 1, 9, 9, 6 translates 	to J
+	0xF8F88	translates 			to F
+
+
+4.3
+	
+	B translates to 14, 9, 15, 9, 14 
+			   or 0xE9F9E
+
+	N trasnlates to 9, 13, 11, 9
+			   or 0x9DB9
+
+
+5.1
+	(bottom up binary search)
+	489
+	256
+	128
+	64
+	32
+	16
+	8
+	4
+	2
+	1

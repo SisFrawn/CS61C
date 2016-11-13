@@ -1,0 +1,21 @@
+in comments.s, comments are causing segmentation faults, otherwise it works correctly with all the comments taken out.
+
+in imm.s, all works perfectly
+
+in jumps.s, the 3rd label causes a segmentation fault.
+	with it removed, the text segment works, but the symbol table is offset by +4, and the relocation
+	table is empty
+
+	FIXED: fix offset in symbol table
+
+	FIXED: relocation table now adds stuff correctly
+
+	FIXED: jumps.s now works perfectly
+
+in labels.s, labels with empty followups are problematic,
+
+	labels now working perfectly
+
+pseudos now working perfectly
+
+combined now working perfectly

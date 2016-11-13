@@ -1,0 +1,89 @@
+					// float squaredDifference = 0;
+					// /* Sum the squared difference within a box of +/- featureHeight and +/- featureWidth. */
+					// for (int boxY = -featureHeight; boxY <= featureHeight; boxY++)
+					// {
+					// 	int leftY = (y + boxY) * imageWidth;
+					// 	int rightY = (y + dy + boxY) * imageWidth;
+					// 	for (int boxX = -featureWidth; boxX <= featureWidth; boxX++)
+					// 	{
+					// 		int leftX = x + boxX;
+					// 		int rightX = x + dx + boxX;
+
+					// 		float difference = left[leftY + leftX] - right[rightY + rightX];
+					// 		squaredDifference += difference * difference;
+					// 	}
+
+					// 	// for (int boxX = 0; boxX < (2*featureWidth) / 4 * 4; boxX += 4) {
+					// 	// 	int leftX = x + boxX - featureWidth;
+					// 	// 	int rightX = x + dx + boxX - featureWidth;
+					// 	// 	float difference = left[leftY + leftX] - right[rightY + rightX];
+					// 	// 	squaredDifference += difference * difference;
+					// 	// 	leftX = x + boxX - featureWidth + 1;
+					// 	// 	rightX = x + dx + boxX - featureWidth + 1;
+					// 	// 	difference = left[leftY + leftX] - right[rightY + rightX];
+					// 	// 	squaredDifference += difference * difference;
+					// 	// 	leftX = x + boxX - featureWidth + 2;
+					// 	// 	rightX = x + dx + boxX - featureWidth + 2;
+					// 	// 	difference = left[leftY + leftX] - right[rightY + rightX];
+					// 	// 	squaredDifference += difference * difference;
+					// 	// 	leftX = x + boxX - featureWidth + 3;
+					// 	// 	rightX = x + dx + boxX - featureWidth + 3;
+					// 	// 	difference = left[leftY + leftX] - right[rightY + rightX];
+					// 	// 	squaredDifference += difference * difference;
+					//  //    }
+
+					//  //    // tail case
+					// 	// for (int boxX = (2*featureWidth) / 4 * 4; boxX <= 2 * featureWidth; boxX++)
+					// 	// {
+					// 	// 	int leftX = x + boxX - featureWidth;
+					// 	// 	int rightX = x + dx + boxX - featureWidth;
+
+					// 	// 	float difference = left[leftY + leftX] - right[rightY + rightX];
+					// 	// 	squaredDifference += difference * difference;
+					// 	// }
+					// }
+
+
+
+		if ((y < featureHeight) || (y >= imageHeight - featureHeight)) {
+			for (int x = 0; x < imageWidth; x++) {
+				depth[y * imageWidth + x] = 0;
+			}
+			continue;
+		}
+
+						int boxX = blockStop; 
+						if (boxX > 2*featureWidth) {
+							continue;
+						}
+						leftX = x + boxX - featureWidth;
+						rightX = x + dx + boxX - featureWidth;
+						difference = left[leftY + leftX] - right[rightY + rightX];
+						squaredDifference += difference * difference;
+
+						boxX++;
+						if (boxX > 2*featureWidth) {
+							continue;
+						}
+						leftX = x + boxX - featureWidth;
+						rightX = x + dx + boxX - featureWidth;
+						difference = left[leftY + leftX] - right[rightY + rightX];
+						squaredDifference += difference * difference;
+
+						boxX++;
+						if (boxX > 2*featureWidth) {
+							continue;
+						}
+						leftX = x + boxX - featureWidth;
+						rightX = x + dx + boxX - featureWidth;
+						difference = left[leftY + leftX] - right[rightY + rightX];
+						squaredDifference += difference * difference;
+
+						boxX++;
+						if (boxX > 2*featureWidth) {
+							continue;
+						}
+						leftX = x + boxX - featureWidth;
+						rightX = x + dx + boxX - featureWidth;
+						difference = left[leftY + leftX] - right[rightY + rightX];
+						squaredDifference += difference * difference;

@@ -1,0 +1,7 @@
+Proj 5-2 Relevant Info
+
+    32 digit account key
+    2KWMOO7CK4HBT3FVUWJF6ZYIZ32ZYVZS
+
+    URL
+    ec2-23-22-189-116.compute-1.amazonaws.com

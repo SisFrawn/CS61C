@@ -1,0 +1,48 @@
+All instructions:
+
+add     done
+addi    done
+addiu   done
+addu    done
+
+and     done
+andi    done
+
+beq     done
+beqal   done
+bne     done
+
+divu    done
+
+j       done
+jal     done
+jr      done
+
+lb      done
+lbu     done
+lhu     done
+lui     done
+lw      done
+
+multu   done
+mfhi    done
+mflo    done
+
+or      done
+ori     done
+
+slt     done
+slti    done
+sltu    done
+
+sll     done
+sra     done
+srl     done
+
+sb      done
+sh      done
+sw      done
+swinc   done
+
+sub     done
+subu    done

@@ -1,0 +1,20 @@
+Lab 1 Answers:
+
+1) run + command line arguments 
+	After first run, unix will remember the arguments
+
+2) First initialize the break point, then use "condition N cond" to make breakpoint number N conditionalso the program only stops if cond is true
+
+3) next 
+
+4) step 
+
+5) continue
+
+6) print ____ which prints the current value of that expression in the current frame 
+
+7) display x 
+
+8) info variables
+
+9) quit 

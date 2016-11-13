@@ -1,0 +1,42 @@
+
+______
+Caches
+    In memory, there are 2^d addresses [0, 2^d-1], and 2^d/block_size number of blocks
+    Example: 32 addresses, block_size of 4 bytes, so there are 8 blocks/words
+
+    Mapping from memory to cache involves taking the block index % blocks_in_cache
+    Example: Mapping the block 4 in mem to a 16 byte, 4 block cache would place it in the first bucket
+
+    Modulus is trivial in binary if a is a power of 2. Formula: a % i = a & ((2 << i) - 1)
+    Example: a = 8; i = 2; a % i =  1000 & ((0010 << 2) - 1)    ->  1000 & 0111 -> 0
+
+    AMAT (Average Memory Access Time) = Hit time + Miss Rate x Miss Penalty (because missing will involve going to cache and checking if its there, which is the hit time, and then the EV of missing) Must calculate for each individual
+
+    Temporal and Spatial Locality govern caching. Things used recently are more likely to be used again (LRU, all of caching). Things that are close (in memory) to things that are being used are likely to be used again (multiword direct maps)
+
+    http://www.pcguide.com/ref/mbsys/cache/funcMapping-c.html
+    __
+    Direct Mapped Caches
+
+        The simplest way to allocate the cache to the system memory is to determine how many cache lines there are (16,384 in our example) and just chop the system memory into the same number of chunks. Then each chunk gets the use of one cache line. This is called direct mapping. So if we have 64 MB of main memory addresses, each cache line would be shared by 4,096 memory addresses (64 M divided by 16 K).
+
+        Tag is used to identify what is inside a cache block unequivocally (no two identical tags)
+
+        Boolean expression for a cache hit: inputTag == blockTag && validBit == 1
+                                            else miss + memory call up and replace cache value
+
+        TIO = Tag, Index, Offset of cache input value
+            Tag -> Identifies whether the block for which the address we are looking for contains it
+            Index -> Gets us to a block in the cache (where the mem address should have been "hashed")
+            Offset -> For multiword-blocks in the cache, which word should be retrieved (muxed)
+
+        Multiword Direct Mapped Cache takes advantage of spatial locality (if you're accessing mem[0], its also likely, you're accessing things around mem[0], so you load those in at the same time)
+            Use Index to go to block, use tag to tel you if the address you're looking for is there, and then use the offset to get the word you need from the block
+
+        Suffers from ping-ponging, which is when two important memory addresses map to the same block in cache and keep replacing each other (no performance gain)... Can be fixed by associative caches
+
+    __
+    Fully Associative Cache: Instead of hard-allocating cache lines to particular memory locations, it is possible to design the cache so that any line can store the contents of any memory location. This is called fully associative mapping.
+
+    __
+    N-Way Set Associative Cache: "N" here is a number, typically 2, 4, 8 etc. This is a compromise between the direct mapped and fully associative designs. In this case the cache is broken into sets where each set contains "N" cache lines, let's say 4. Then, each memory address is assigned a set, and can be cached in any one of those 4 locations within the set that it is assigned to. In other words, within each set the cache is associative, and thus the name.

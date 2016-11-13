@@ -1,0 +1,90 @@
+#!/bin/bash
+
+make
+./assembler input/combined.s intermediate.s output.txt -log log.txt
+echo ""
+echo ""
+echo "testing combined.s, should not have diffs below"
+echo ""
+echo ""
+diff intermediate.s out/ref/combined_ref.int
+diff output.txt out/ref/combined_ref.out
+
+./assembler input/comments.s intermediate.s output.txt -log log.txt
+echo ""
+echo ""
+echo "testing comments.s, should not have diffs below"
+echo ""
+echo ""
+diff intermediate.s out/ref/comments_ref.int
+diff output.txt out/ref/comments_ref.out
+
+./assembler input/imm.s intermediate.s output.txt -log log.txt
+echo ""
+echo ""
+echo "testing imm.s, should not have diffs below"
+echo ""
+echo ""
+diff intermediate.s out/ref/imm_ref.int
+diff output.txt out/ref/imm_ref.out
+
+./assembler input/jumps.s intermediate.s output.txt -log log.txt
+echo ""
+echo ""
+echo "testing jumps.s, should not have diffs below"
+echo ""
+echo ""
+diff intermediate.s out/ref/jumps_ref.int
+diff output.txt out/ref/jumps_ref.out
+
+./assembler input/labels.s intermediate.s output.txt -log log.txt
+echo ""
+echo ""
+echo "testing labels.s, should not have diffs below"
+echo ""
+echo ""
+diff intermediate.s out/ref/labels_ref.int
+diff output.txt out/ref/labels_ref.out
+
+./assembler -p1 input/p1_errors.s intermediate.s -log log.txt
+echo ""
+echo ""
+echo "testing p1_errors.s, should not have diffs below"
+echo ""
+echo ""
+diff log.txt log/p1_errors_ref.txt
+
+./assembler input/p2_errors.s intermediate.s output.txt -log log.txt
+echo ""
+echo ""
+echo "testing p2_errors.s, should not have diffs below"
+echo ""
+echo ""
+diff log.txt log/p2_errors_ref.txt
+
+./assembler input/pseudo.s intermediate.s output.txt -log log.txt
+echo ""
+echo ""
+echo "testing pseudo.s, should not have diffs below"
+echo ""
+echo ""
+diff intermediate.s out/ref/pseudo_ref.int
+diff output.txt out/ref/pseudo_ref.out
+
+./assembler input/rtypes.s intermediate.s output.txt -log log.txt
+echo ""
+echo ""
+echo "testing rtypes.s, should not have diffs below"
+echo ""
+echo ""
+diff intermediate.s out/ref/rtypes_ref.int
+diff output.txt out/ref/rtypes_ref.out
+
+./assembler input/simple.s intermediate.s output.txt -log log.txt
+echo ""
+echo ""
+echo "testing simple.s, should not have diffs below"
+echo ""
+echo ""
+diff intermediate.s out/ref/simple_ref.int
+diff output.txt out/ref/simple_ref.out

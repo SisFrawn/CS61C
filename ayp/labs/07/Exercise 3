@@ -1,0 +1,15 @@
+Exercise 3 Questions and Answers
+
+1. What do the bits BIT 0 - BIT 5 represent?
+- The opcode of the instruction
+
+
+2. For what instruction or type of instructions is opALU0 active? What operation in the ALU does opALU0 represent?
+- Instructions where the 2nd bit is turned on (4). This includes branching instructions
+
+
+3. For what instruction or type of instructions is opALU1 active?
+- R-type
+
+4. For what instruction or type of instructions is ALUSrc active? What does this signal represent with respect to the input to the ALU?
+- Load and Store Word

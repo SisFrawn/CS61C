@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C1069CD1BBF671700CEAE0E /* assembler.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C1069CA1BBF671700CEAE0E /* assembler.c */; settings = {ASSET_TAGS = (); }; };
+		0C1069CE1BBF671700CEAE0E /* test_assembler.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C1069CC1BBF671700CEAE0E /* test_assembler.c */; settings = {ASSET_TAGS = (); }; };
+		0C1069D11BBF679100CEAE0E /* translate_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C1069CF1BBF679100CEAE0E /* translate_utils.c */; settings = {ASSET_TAGS = (); }; };
+		0C1069D31BBFA4D900CEAE0E /* tables.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C1069D21BBFA4D900CEAE0E /* tables.c */; settings = {ASSET_TAGS = (); }; };
+		0C1069D71BC0850A00CEAE0E /* translate.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C1069D51BC0850A00CEAE0E /* translate.c */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0C1069BE1BBF66F300CEAE0E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0C1069C01BBF66F300CEAE0E /* Project 2 - MIPS Assembler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project 2 - MIPS Assembler"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1069CA1BBF671700CEAE0E /* assembler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = assembler.c; path = ../../assembler.c; sourceTree = "<group>"; };
+		0C1069CB1BBF671700CEAE0E /* assembler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = assembler.h; path = ../../assembler.h; sourceTree = "<group>"; };
+		0C1069CC1BBF671700CEAE0E /* test_assembler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = test_assembler.c; path = ../../test_assembler.c; sourceTree = "<group>"; };
+		0C1069CF1BBF679100CEAE0E /* translate_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = translate_utils.c; path = ../../src/translate_utils.c; sourceTree = "<group>"; };
+		0C1069D01BBF679100CEAE0E /* translate_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = translate_utils.h; path = ../../src/translate_utils.h; sourceTree = "<group>"; };
+		0C1069D21BBFA4D900CEAE0E /* tables.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tables.c; path = ../../src/tables.c; sourceTree = "<group>"; };
+		0C1069D41BBFAAB800CEAE0E /* tables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tables.h; path = ../../src/tables.h; sourceTree = "<group>"; };
+		0C1069D51BC0850A00CEAE0E /* translate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = translate.c; path = ../../src/translate.c; sourceTree = "<group>"; };
+		0C1069D61BC0850A00CEAE0E /* translate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = translate.h; path = ../../src/translate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C1069BD1BBF66F300CEAE0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C1069B71BBF66F200CEAE0E = {
+			isa = PBXGroup;
+			children = (
+				0C1069C21BBF66F300CEAE0E /* Project 2 - MIPS Assembler */,
+				0C1069C11BBF66F300CEAE0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C1069C11BBF66F300CEAE0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C1069C01BBF66F300CEAE0E /* Project 2 - MIPS Assembler */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C1069C21BBF66F300CEAE0E /* Project 2 - MIPS Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				0C1069D41BBFAAB800CEAE0E /* tables.h */,
+				0C1069D21BBFA4D900CEAE0E /* tables.c */,
+				0C1069D01BBF679100CEAE0E /* translate_utils.h */,
+				0C1069CF1BBF679100CEAE0E /* translate_utils.c */,
+				0C1069D51BC0850A00CEAE0E /* translate.c */,
+				0C1069D61BC0850A00CEAE0E /* translate.h */,
+				0C1069CA1BBF671700CEAE0E /* assembler.c */,
+				0C1069CB1BBF671700CEAE0E /* assembler.h */,
+				0C1069CC1BBF671700CEAE0E /* test_assembler.c */,
+			);
+			path = "Project 2 - MIPS Assembler";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C1069BF1BBF66F300CEAE0E /* Project 2 - MIPS Assembler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C1069C71BBF66F300CEAE0E /* Build configuration list for PBXNativeTarget "Project 2 - MIPS Assembler" */;
+			buildPhases = (
+				0C1069BC1BBF66F300CEAE0E /* Sources */,
+				0C1069BD1BBF66F300CEAE0E /* Frameworks */,
+				0C1069BE1BBF66F300CEAE0E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Project 2 - MIPS Assembler";
+			productName = "Project 2 - MIPS Assembler";
+			productReference = 0C1069C01BBF66F300CEAE0E /* Project 2 - MIPS Assembler */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C1069B81BBF66F300CEAE0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Kunal Mishra";
+				TargetAttributes = {
+					0C1069BF1BBF66F300CEAE0E = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 0C1069BB1BBF66F300CEAE0E /* Build configuration list for PBXProject "Project 2 - MIPS Assembler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0C1069B71BBF66F200CEAE0E;
+			productRefGroup = 0C1069C11BBF66F300CEAE0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C1069BF1BBF66F300CEAE0E /* Project 2 - MIPS Assembler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C1069BC1BBF66F300CEAE0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1069D71BC0850A00CEAE0E /* translate.c in Sources */,
+				0C1069D31BBFA4D900CEAE0E /* tables.c in Sources */,
+				0C1069D11BBF679100CEAE0E /* translate_utils.c in Sources */,
+				0C1069CE1BBF671700CEAE0E /* test_assembler.c in Sources */,
+				0C1069CD1BBF671700CEAE0E /* assembler.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0C1069C51BBF66F300CEAE0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0C1069C61BBF66F300CEAE0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0C1069C81BBF66F300CEAE0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0C1069C91BBF66F300CEAE0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C1069BB1BBF66F300CEAE0E /* Build configuration list for PBXProject "Project 2 - MIPS Assembler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C1069C51BBF66F300CEAE0E /* Debug */,
+				0C1069C61BBF66F300CEAE0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C1069C71BBF66F300CEAE0E /* Build configuration list for PBXNativeTarget "Project 2 - MIPS Assembler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C1069C81BBF66F300CEAE0E /* Debug */,
+				0C1069C91BBF66F300CEAE0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C1069B81BBF66F300CEAE0E /* Project object */;
+}

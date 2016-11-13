@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>525E3828-6F40-436B-B2E2-18CBBB276384</string>
+	<key>IDESourceControlProjectName</key>
+	<string>lydnaTutorial</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>126672492886C5351705B9B3D10BF63BCE045E05</key>
+		<string>https://bitbucket.org/kmishra9/cs61c-ayp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>lydnaTutorial/lydnaTutorial.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>126672492886C5351705B9B3D10BF63BCE045E05</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/kmishra9/cs61c-ayp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>126672492886C5351705B9B3D10BF63BCE045E05</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>126672492886C5351705B9B3D10BF63BCE045E05</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ayp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

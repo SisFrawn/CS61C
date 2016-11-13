@@ -1,0 +1,18 @@
+lui $at 3
+ori $8 $at 48928
+add $rd $rs $0
+slt $at $rs $rt
+bne $at $0 label1
+slt $1 $rt $rs
+bne $1 $0 label1
+add $rd $rd $rs
+add $rd $rd $rt
+sw $at 0 $rd
+add $rd $rs $0
+add $rs $at $0
+mult $rs $rt
+mflo $rd
+div $rs $rt
+mflo $rd
+div $rs $rt
+mfhi $rd

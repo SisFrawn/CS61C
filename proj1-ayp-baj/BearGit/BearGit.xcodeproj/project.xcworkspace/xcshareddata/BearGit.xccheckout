@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>14EBADCB-43D0-4D91-96DF-843475E8565B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BearGit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3B46932F030B199174E050D961A00940CD79E7AD</key>
+		<string>https://bitbucket.org/kmishra9/proj1-ayp-baj.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BearGit/BearGit.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3B46932F030B199174E050D961A00940CD79E7AD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/kmishra9/proj1-ayp-baj.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3B46932F030B199174E050D961A00940CD79E7AD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3B46932F030B199174E050D961A00940CD79E7AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>proj1-ayp-baj</string>
+		</dict>
+	</array>
+</dict>
+</plist>

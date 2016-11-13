@@ -1,0 +1,43 @@
+proj5-2.txt
+
+1.  Repartition size=500
+
+    Cluster size = 5
+        Simple Facebook:    43.27 min
+        Simple Enron:       64.77 min
+        Backedges Facebook: 79.42 min
+        Backedges Enron:    73.60 min
+
+    Cluster size = 10
+        Simple Facebook:    11.30 min
+        Simple Enron:       14.09 min
+        Backedges Facebook: 16.19 min
+        Backedges Enron:    11.46 min
+
+2.
+    Ratio for FB = 854.4kb / 11.30 min = 75.61
+    Ratio for En = 4000kb  / 14.09 min = 283.89
+
+    We got a better than expected value for the second data set. Instead of the ratio being the same, the time did not increase linearly with the input size. Part of the reason is because the amount of work the overhead has to do does not increase linearly with the input size, so all the increase was parallelizable.
+
+    In addition, the data itself may be the reason for such a big variance. Facebook, with fewer edges but MORE connections between those edges would force more work to be done per iteration (and thus per core) than something like a straightforward email chain with more edges but very few connections.
+
+    Intuitive example: 10 edges with 9 connections per edge (everything is connected to everything) would be 90 updates per iteration but 50 edges with 1 connection per edge (completely linear) would be only 50 updates per iteration. More edges (such as 150,000 vs. 88,000) doesn't necessarily indicate the amount of work that needs to be done by the cluster.
+
+3.
+    73.60/11.46 = 6.42 speedup.
+
+    Strong scaling : As the problem size stays the same, there is a significant speedup as the number of cores doubles from 5 to 10
+                     Enron with 10 instances vs Enron with 5 instances = 6.42 speedup
+    Weak scaling :   As the problem size per processor stays the same (Fb data set is roughly half the size of Enron with half the number of processors 10 vs 5) a still significant speedup remains
+                     Enron with 10 instances vs Facebook with 5 instances: 6.93 speedup
+
+    Our code clearly parallelizes very well as the values for strong scaling and weak scaling are very similar.
+
+4.  The optimal repartition count was: 20
+
+    Increasing the repartition count is problematic because it increases overhead (which is why 500 sucks so much) while not gaining any extra parallelization (finite number of cores (20) will all be working at any number >= 20).
+
+    Decreasing the repartition count is problematic because you get load imbalance and underutilization of some slaves. For example, using just one partition means that only one slave works on it
+
+5. $1.1753 = 4.5*5*.0161 + 5*10*.0161 + .5*1*.0161
